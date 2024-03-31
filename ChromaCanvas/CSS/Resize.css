@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+body {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper {
+  width: 450px;
+  padding: 30px;
+  height: 288px;
+  background: #fff;
+  border-radius: 9px;
+  transition: height 0.2s ease;
+}
+
+.wrapper.active {
+  height: 537px;
+}
+
+.wrapper.active .upload-box {
+  border: none;
+}
+
+.wrapper .upload-box {
+  height: 225px;
+  display: flex;
+  cursor: pointer;
+  border-radius: 5px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  border: 2px dashed #afafaf;
+}
+
+.wrapper.active .upload-box p {
+  display: none;
+}
+.wrapper.active .upload-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.upload-box p {
+  color: #000;
+  margin-top: 20px;
+  font-size: 2.06rem;
+}
+
+.wrapper .content {
+  opacity: 0;
+  margin-top: 28px;
+  pointer-events: none;
+}
+
+.wrapper.active .content {
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity 0.5s 0.05s ease;
+}
+
+.content .row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content .row .column {
+  width: calc(100% / 2 - 15px);
+}
+
+.row .column label {
+  color: #000;
+  font-size: 1.3rem;
+}
+
+.sizes .column input {
+  width: 100;
+  height: 49px;
+  outline: none;
+  margin-top: 7px;
+  padding: 0 15px;
+  font-size: 1.2rem;
+  border-radius: 4px;
+  border: 1px solid #aaa;
+}
+
+.sizes .column input:focus {
+  padding: 0 14px;
+  border: 2px solid #28282b;
+}
+
+.content .checkboxes {
+  margin-top: 20px;
+}
+
+.checkboxes .column {
+  display: flex;
+  align-items: center;
+}
+
+.checkboxes .column input {
+  width: 17px;
+  height: 17px;
+  margin-right: 9px;
+  accent-color: #28282b;
+}
+
+.content .download-btn {
+  width: 100%;
+  border: none;
+  color: #fff;
+  outline: none;
+  cursor: pointer;
+  padding: 15px 0;
+  font-size: 1.3rem;
+  border-radius: 5px;
+  margin: 30px 0 10px;
+  background: #28282b;
+  text-transform: uppercase;
+}
+
+@media (max-width: 450px) {
+  .wrapper {
+    padding: 20px;
+  }
+  .sizes .column input {
+    font-size: 1rem;
+  }
+  .row .column {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .upload-box p {
+    font-size: 1.6rem;
+  }
+}

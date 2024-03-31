@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="Images/Icon.png" />
+    <link rel="stylesheet" href="CSS/Ai.css" />
+    <link rel="stylesheet" href="CSS/Style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <title>ChromaCanvas</title>
+  </head>
+  <body>
+    <div id="menu-bars" class="fas fa-bars"></div>
+    <header>
+      <a href="index.html" class="logo"><span>Chroma</span>Canvas</a>
+      <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="editor.html">Image Editor</a>
+        <a href="resize.html">Resize Image</a>
+        <a href="search.html">Search Image</a>
+        <a href="gradient.html">Gradient Generator</a>
+        <a href="ai.html">AI Image Generation</a>
+      </nav>
+      <div class="follow">
+        <a href="https://twitter.com/MatttJerson" class="fab fa-twitter"></a>
+        <a
+          href="https://www.instagram.com/mjmiiranda/"
+          class="fab fa-instagram"
+        ></a>
+        <a href="https://github.com/MattJerson" class="fab fa-github"></a>
+        <a
+          href="https://www.linkedin.com/in/matt-jerson-figueroa/"
+          class="fab fa-linkedin"
+        ></a>
+      </div>
+    </header>
+    <section class="image-generator">
+      <div class="content">
+        <h1>AI Image Generator Tool</h1>
+        <p>
+          Convert your text into an image within a second using this javascript
+          -powered AI image generator tool
+        </p>
+        <form action="#" class="generate-form">
+          <input
+            type="text"
+            class="prompt-input"
+            placeholder="Describe what you want"
+            required
+          />
+          <div class="controls">
+            <select class="img-quantity">
+              <option value="1">1 image</option>
+              <option value="2">2 image</option>
+              <option value="3">3 image</option>
+              <option value="4" selected>4 image</option>
+            </select>
+            <button type="submit" class="generate-btn">Generate</button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <section class="image-gallery">
+      <div class="img-card">
+        <img src="Images/Img-1.jpg" alt="image" />
+      </div>
+      <div class="img-card">
+        <img src="Images/Img-2.jpg" alt="image" />
+      </div>
+      <div class="img-card">
+        <img src="Images/Img-3.jpg" alt="image" />
+      </div>
+      <div class="img-card">
+        <img src="Images/Img-4.jpg" alt="image" />
+      </div>
+    </section>
+    <script src="JS/Script.js"></script>
+    <script src="JS/Ai.js" defer></script>
+  </body>
+</html>
